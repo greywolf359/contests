@@ -13,6 +13,8 @@ module.exports = {
 	host: env.HOST || '0.0.0.0',
 	logStars: logStars,
 	nodeEnv: nodeEnv,
-	serverUrl: `http://${this.host}:${this.port}`
+	get serverUrl(){
+		return `http://${this.host}:${this.port}`
+	}
 
 }
